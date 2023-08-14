@@ -27,6 +27,9 @@
   <script src="js/vendor/jquery.hashchange.min.js"></script>
   <script src="js/vendor/jquery.easytabs.min.js"></script>
   <script src="js/main.js"></script>
+  <!-- Stripe JS-->
+  <script src="https://js.stripe.com/v3/"></script>
+
 
     <script>
     function showContent(contentType, containerId, content) {
@@ -132,7 +135,7 @@
                 <div class="info">
                   <h2>
                     <p></p>
-                    datrat.xyz 
+                    Testing
                   </h2>
                   <h4>
                     Website
@@ -173,12 +176,12 @@
                     <i class="icon-envelope"></i>
                     <div class="item-data">
                       <h3>
-                        <a href="https://discord.gg/j4am7Dfcv3">
-                          Join The Discord
+                        <a href="https://mwlimits.org/?utm_source=bing&utm_medium=cpc&msclkid=9c75faefee9f1a5133db9e35b1c2f363">
+                          Donate
                         </a>
                       </h3>
                       <p>
-                        j4am7Dfcv3
+                        pls
                       </p>
                     </div>
                   </div>
@@ -188,12 +191,12 @@
                     <i class="icon-facebook"></i>
                     <div class="item-data">
                       <h3>
-                        <a href="https://www.youtube.com/@byterat">
-                          Youtube
+                        <a href="https://mwlimits.org/?utm_source=bing&utm_medium=cpc&msclkid=9c75faefee9f1a5133db9e35b1c2f363">
+                          Donate
                         </a>
                       </h3>
                       <p>
-                        Subscribe
+                        pls
                       </p>
                     </div>
                   </div>
@@ -279,7 +282,7 @@
             <!-- Image 1 -->
             <div class="grid-item">
               <a href="#" class="image-link" data-target="popup-1">
-                <img class="image" src="./images/img1.png" alt="Image 1">
+                <img class="image" src="./images/SHITBALLS.png" alt="Image 1">
               </a>
             </div>
             <!-- ... Repeat for Images 2 to 60 ... -->
@@ -299,40 +302,40 @@
         </div>
         <div class="popup-grid">
           <!-- Image 1 -->
-          <div class="popup-image">
-            <img src="./images/img1.png" alt="Image 1">
+          <div class="popup-image" data-target="popup-1"> 
+            <img src="./images/product1/front.jpg" alt="Image 1">
           </div>
           <!-- Image 2 -->
-          <div class="popup-image">
-            <img src="./images/img1.png" alt="Image 2">
+          <div class="popup-image" data-target="popup-2"> 
+            <img src="./images/product1/back.jpg" alt="Image 2">
           </div>
           <!-- Image 3 -->
-          <div class="popup-image">
-            <img src="./images/img1.png" alt="Image 3">
+          <div class="popup-image" data-target="popup-3"> 
+            <img src="./images/product1/p1.jpg" alt="Image 3">
           </div>
           <!-- Image 4 -->
-          <div class="popup-image">
-            <img src="./images/img1.png" alt="Image 4">
+          <div class="popup-image" data-target="popup-4"> 
+            <img src="./images/product1/p2.jpg" alt="Image 4">
           </div>
           <!-- Image 5 -->
-          <div class="popup-image">
-            <img src="./images/img1.png" alt="Image 5">
+          <div class="popup-image" data-target="popup-5"> 
+            <img src="./images/product1/p3.jpg" alt="Image 5">
           </div>
           <!-- Image 6 -->
-          <div class="popup-image">
-            <img src="./images/img1.png" alt="Image 6">
+          <div class="popup-image" data-target="popup-6"> 
+            <img src="./images/product1/p4.jpg" alt="Image 6">
           </div>
           <!-- Image 7 -->
-          <div class="popup-image">
-            <img src="./images/img1.png" alt="Image 7">
+          <div class="popup-image" data-target="popup-7"> 
+            <img src="./images/product1/p5.jpg" alt="Image 7">
           </div>
           <!-- Image 8 -->
           <div class="popup-image" data-target="popup-8"> 
-             <img src="./images/my.jpg" alt="Image 8">
+             <img src="./images/product1/p6.jpg" alt="Image 8">
           </div>
           <!-- Image 9 -->
-          <div class="popup-image" data-src="./images/img1.png">
-            <img src="./images/SHITBALLS.png" alt="Image 9">
+          <div class="popup-image" data-target="popup-9"> 
+            <img src="./images/product1/c1.jpg" alt="Image 9">
           </div>
         </div>
         <div class="popup-content-right">
@@ -341,10 +344,22 @@
           </div>
           <div class="popup-buttons">
             <button class="cancel-button">Cancel</button>
-            <a class="purchase-button" href="https://your-purchase-link.com">Purchase</a>
+            <a class="purchase-button" href="https://buy.stripe.com/9AQaGIaE0cGcety9AB">Purchase</a>
           </div>
         </div>
       </div>
+      <div class="popup-content">
+        <!-- Other content -->
+      
+        <!-- Cart display -->
+        <div id="cart" class="cart"></div>
+      
+        <!-- Payment form -->
+        <form id="payment-form">
+          <!-- ... Rest of the form ... -->
+        </form>
+      </div>
+      
     </div>
     <!-- Add more popup divs here for other images -->
   </div>

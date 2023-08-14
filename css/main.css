@@ -1440,7 +1440,7 @@ tbody {
 }
 
 .purchase-button {
-  background-color: green;
+  background-color: #4AB478;
   color: white;
 }
 
@@ -1453,4 +1453,8 @@ tbody {
   color: #333;
   cursor: pointer;
 }
-//new
+
+/* Style for the large image border */
+#large-image {
+  border: 3px solid #4AB478; /* Add your desired border color and size */
+}
