@@ -1458,3 +1458,56 @@ tbody {
 #large-image {
   border: 3px solid #4AB478; /* Add your desired border color and size */
 }
+
+/* CSS to style the cart items */
+.cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.item-details p {
+  margin: 0;
+}
+
+/* You can add more styling as needed */
+
+.cart-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Style for the visible cart */
+.cart-visible {
+  display: block;
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Style for the cart items */
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.item-image img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}

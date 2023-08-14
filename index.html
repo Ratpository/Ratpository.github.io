@@ -42,6 +42,7 @@
     }
     </script>
 
+
     <style>
     /* Add your existing CSS styles here */
 
@@ -54,6 +55,10 @@
 <body class="bg-fixed bg-1">
   <div class="main-container">
     <div class="main wrapper clearfix">
+      <!--CART-->
+      <button id="cart-button" class="cart-button">
+        <i class="icon-shopping-cart"></i>
+      </button>
 
       <!-- Header Start -->
       <header id="header">
@@ -273,97 +278,29 @@
           <!-- End skills Tab Data -->
           <!-- ----------------------------------------------------------------------------------- -->
 
-         <!-- Projects Tab Data -->
-  <div id="products">
-    <section class="clearfix">
-      <div class="project-section">
-        <div class="image-grid">
-          <div class="grid-container">
-            <!-- Image 1 -->
-            <div class="grid-item">
-              <a href="#" class="image-link" data-target="popup-1">
-                <img class="image" src="./images/SHITBALLS.png" alt="Image 1">
-              </a>
-            </div>
-            <!-- ... Repeat for Images 2 to 60 ... -->
-          </div>
-        </div>
+          <!-- Products Tab Data -->
+<div id="products">
+  <section class="clearfix">
+    <div class="project-section">
+      <!-- Center-aligned FitPrint iframe in landscape orientation for desktop -->
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden;">
+        <iframe id="fitPrintIframe" frameborder="0" scrolling="no" src="https://shop.fitprint.io/v2.html?shop=d30b5094-f692-4801-a2f2-7fd805d293c3" style="width: 100vw; height: calc(100vw * 1080 / 1920); max-width: 1920px;"></iframe>
       </div>
-    </section>
-  </div>
-  <!-- End Projects tab -->
-
-  <!-- Hidden Popup Container -->
-  <div id="popup-container" class="hidden">
-    <div class="popup" id="popup-1">
-      <div class="popup-content">
-        <div class="popup-text">
-          <p>Text above the grid</p>
-        </div>
-        <div class="popup-grid">
-          <!-- Image 1 -->
-          <div class="popup-image" data-target="popup-1"> 
-            <img src="./images/product1/front.jpg" alt="Image 1">
-          </div>
-          <!-- Image 2 -->
-          <div class="popup-image" data-target="popup-2"> 
-            <img src="./images/product1/back.jpg" alt="Image 2">
-          </div>
-          <!-- Image 3 -->
-          <div class="popup-image" data-target="popup-3"> 
-            <img src="./images/product1/p1.jpg" alt="Image 3">
-          </div>
-          <!-- Image 4 -->
-          <div class="popup-image" data-target="popup-4"> 
-            <img src="./images/product1/p2.jpg" alt="Image 4">
-          </div>
-          <!-- Image 5 -->
-          <div class="popup-image" data-target="popup-5"> 
-            <img src="./images/product1/p3.jpg" alt="Image 5">
-          </div>
-          <!-- Image 6 -->
-          <div class="popup-image" data-target="popup-6"> 
-            <img src="./images/product1/p4.jpg" alt="Image 6">
-          </div>
-          <!-- Image 7 -->
-          <div class="popup-image" data-target="popup-7"> 
-            <img src="./images/product1/p5.jpg" alt="Image 7">
-          </div>
-          <!-- Image 8 -->
-          <div class="popup-image" data-target="popup-8"> 
-             <img src="./images/product1/p6.jpg" alt="Image 8">
-          </div>
-          <!-- Image 9 -->
-          <div class="popup-image" data-target="popup-9"> 
-            <img src="./images/product1/c1.jpg" alt="Image 9">
-          </div>
-        </div>
-        <div class="popup-content-right">
-          <div class="popup-large-image">
-            <img id="large-image" src="" alt="Large Image">
-          </div>
-          <div class="popup-buttons">
-            <button class="cancel-button">Cancel</button>
-            <a class="purchase-button" href="https://buy.stripe.com/9AQaGIaE0cGcety9AB">Purchase</a>
-          </div>
-        </div>
-      </div>
-      <div class="popup-content">
-        <!-- Other content -->
-      
-        <!-- Cart display -->
-        <div id="cart" class="cart"></div>
-      
-        <!-- Payment form -->
-        <form id="payment-form">
-          <!-- ... Rest of the form ... -->
-        </form>
-      </div>
-      
     </div>
-    <!-- Add more popup divs here for other images -->
-  </div>
-  
+  </section>
+</div>
+<!-- End Products Tab Data -->
+
+<style>
+  /* Style the iframe to fill the width and height */
+  #fitPrintIframe {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+
+
 
           <!-- ----------------------------------------------------------------------------------- -->
           <!-- Contact Tab Data -->
@@ -394,7 +331,7 @@
                       E-mail
                     </h4>
                     <p>
-                      soon
+                      bussiness@datrat.xyz
                     </p>
                   </div>
                 </div>
@@ -419,9 +356,35 @@
           </div>
           <!-- End Contact Data -->
           <!-- ----------------------------------------------------------------------------------- -->
+          
         </div>
+        <!-- Cart sidebar -->
+<div id="cart-sidebar" class="cart-sidebar" hidden>
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button id="close-cart" class="close-cart-button">&times;</button>
+  </div>
+  <div id="cart" class="cart">
+    <!-- Existing cart content here -->
+
+    <!-- Payment form -->
+    <div id="payment-form" class="payment-form">
+      <label for="card-element">
+        Credit or debit card
+      </label>
+      <div id="card-element">
+        <!-- A Stripe Element will be inserted here. -->
       </div>
 
+      <!-- Used to display form errors. -->
+      <div id="card-errors" role="alert"></div>
+
+      <button id="submit-payment">Submit Payment</button>
+    </div>
+  </div>
+</div>
+<!-- Add this closing tag to match your original HTML structure -->
+</div> <!-- Closing div for the "main-container" -->
 </body>
 
 </html>

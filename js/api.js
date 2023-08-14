@@ -17,6 +17,43 @@ app.post('/api/add-to-cart', (req, res) => {
   res.json({ message: 'Item added to cart successfully' });
 });
 
+// JavaScript code for handling the cart
+
+let cartItems = []; // Array to store cart items
+
+// Function to add item to cart
+function addToCart(itemId, itemName, itemPrice, itemImage) {
+  cartItems.push({ itemId, itemName, itemPrice, itemImage });
+  updateCartDisplay();
+}
+
+// Function to update cart display
+function updateCartDisplay() {
+  const cartElement = document.getElementById('cart');
+  cartElement.innerHTML = ''; // Clear previous cart content
+  cartItems.forEach(item => {
+    const itemDiv = document.createElement('div');
+    itemDiv.innerHTML = `
+      <p>${item.itemName} - $${item.itemPrice.toFixed(2)}</p>
+      <img src="${item.itemImage}" alt="${item.itemName}">
+    `;
+    cartElement.appendChild(itemDiv);
+  });
+}
+
+// Attach event listener to "Add to Cart" buttons
+const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const itemId = button.dataset.itemId;
+    const itemName = button.dataset.itemName;
+    const itemPrice = parseFloat(button.dataset.itemPrice);
+    const itemImage = button.dataset.itemImage;
+    addToCart(itemId, itemName, itemPrice, itemImage);
+  });
+});
+
+
 // Endpoint to process checkout and payment
 app.post('/api/checkout', async (req, res) => {
   try {
