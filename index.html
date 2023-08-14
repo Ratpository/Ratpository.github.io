@@ -39,6 +39,11 @@
     }
     </script>
 
+    <style>
+    /* Add your existing CSS styles here */
+
+    /* Additional styles for the popup grid */
+  </style>
 </head>
 
 <!-- Start of Body Tag -->
@@ -93,10 +98,10 @@
           </li>
 
           <li class='tab'>
-            <a href="#portfolio">
+            <a href="#products">
               <i class="icon-heart"></i>
               <span>
-                Projects
+                Products
               </span>
             </a>
           </li>
@@ -148,8 +153,8 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#portfolio">
-                        View Projects
+                      <a href="#products">
+                        Shop For Products
                       </a>
                     </li>
                     <li>
@@ -264,36 +269,87 @@
 
           <!-- End skills Tab Data -->
           <!-- ----------------------------------------------------------------------------------- -->
-          <!-- Projects Tab Data -->
-          <div id="portfolio">
-            <section class="clearfix">
-              <div class="project-section">
-              
-                
-              
 
-                <div class="g1">
-                  <h2>Videos</h2>
-                  <iframe src="https://www.youtube.com/embed/QQF9JckjNKk" frameborder="0" allowfullscreen></iframe>
-                  <iframe src="https://www.youtube.com/embed/QQF9JckjNKk" frameborder="0" allowfullscreen></iframe>
-                </div>
-          
-                <div class="g2">
-                  <h2>Images</h2>
-                  <img class="image" src="./images/img1.png" alt="Image 1">
-                  <img class="image" src="./images/my.jpg" alt="Image 2">
-                  <img class="image" src="./images/my.jpg" alt="Image 3">
-                  <img class="image" src="./images/my.jpg" alt="Image 4">
-                  <img class="image" src="./images/my.jpg" alt="Image 5">
-                  <img class="image" src="./images/my.jpg" alt="Image 6">
-                </div>
-                
-              </div>
-
-              
-            </section>
+         <!-- Projects Tab Data -->
+  <div id="products">
+    <section class="clearfix">
+      <div class="project-section">
+        <div class="image-grid">
+          <div class="grid-container">
+            <!-- Image 1 -->
+            <div class="grid-item">
+              <a href="#" class="image-link" data-target="popup-1">
+                <img class="image" src="./images/img1.png" alt="Image 1">
+              </a>
+            </div>
+            <!-- ... Repeat for Images 2 to 60 ... -->
           </div>
-          <!-- End Projects tab -->
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- End Projects tab -->
+
+  <!-- Hidden Popup Container -->
+  <div id="popup-container" class="hidden">
+    <div class="popup" id="popup-1">
+      <div class="popup-content">
+        <div class="popup-text">
+          <p>Text above the grid</p>
+        </div>
+        <div class="popup-grid">
+          <!-- Image 1 -->
+          <div class="popup-image">
+            <img src="./images/img1.png" alt="Image 1">
+          </div>
+          <!-- Image 2 -->
+          <div class="popup-image">
+            <img src="./images/img1.png" alt="Image 2">
+          </div>
+          <!-- Image 3 -->
+          <div class="popup-image">
+            <img src="./images/img1.png" alt="Image 3">
+          </div>
+          <!-- Image 4 -->
+          <div class="popup-image">
+            <img src="./images/img1.png" alt="Image 4">
+          </div>
+          <!-- Image 5 -->
+          <div class="popup-image">
+            <img src="./images/img1.png" alt="Image 5">
+          </div>
+          <!-- Image 6 -->
+          <div class="popup-image">
+            <img src="./images/img1.png" alt="Image 6">
+          </div>
+          <!-- Image 7 -->
+          <div class="popup-image">
+            <img src="./images/img1.png" alt="Image 7">
+          </div>
+          <!-- Image 8 -->
+          <div class="popup-image" data-target="popup-8"> 
+             <img src="./images/my.jpg" alt="Image 8">
+          </div>
+          <!-- Image 9 -->
+          <div class="popup-image" data-src="./images/img1.png">
+            <img src="./images/SHITBALLS.png" alt="Image 9">
+          </div>
+        </div>
+        <div class="popup-content-right">
+          <div class="popup-large-image">
+            <img id="large-image" src="" alt="Large Image">
+          </div>
+          <div class="popup-buttons">
+            <button class="cancel-button">Cancel</button>
+            <a class="purchase-button" href="https://your-purchase-link.com">Purchase</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add more popup divs here for other images -->
+  </div>
+  
+
           <!-- ----------------------------------------------------------------------------------- -->
           <!-- Contact Tab Data -->
           <div id="contact">
@@ -350,6 +406,7 @@
           <!-- ----------------------------------------------------------------------------------- -->
         </div>
       </div>
+
 </body>
 
 </html>
